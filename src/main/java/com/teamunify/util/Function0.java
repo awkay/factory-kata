@@ -3,10 +3,10 @@ package com.teamunify.util;
 public abstract class Function0<T> {
   public abstract T apply();
 
-  public static Function0<Integer> functionReturningValue(final int value) {
-    return new Function0<Integer>() {
+  public static <T> Function0<T> functionReturningValue(final T value) {
+    return new Function0<T>() {
       @Override
-      public Integer apply() {
+      public T apply() {
         return value;
       }
     };
